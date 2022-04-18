@@ -9,6 +9,7 @@
     <style type="text/css">
         body {
             margin: 40px auto 0 auto;
+            margin-top: 15px;
             max-width: 650px;
             color: #444;
             background-color: #f5f5f5;
@@ -21,10 +22,46 @@
         h3 {
             line-height: 1.2
         }
+
+        nav {
+            position: sticky;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #bbb;
+            top: 0;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 16px;
+            padding: 0;
+            margin: 0;
+            padding: 8px;
+        }
+        nav ul li {
+            height: 35px;
+        }
+        nav ul li a {
+            height: 100%;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
 <body>
+    <nav>
+        <ul>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#next">Next</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     <header>
         <h1>Don Eber</h1>
         <aside>This is my awesome website.</aside>
