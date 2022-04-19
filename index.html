@@ -8,13 +8,15 @@
     <title>Don Eber</title>
     <style type="text/css">
         body {
+            background-color: #f5f5f5;
+            color: #444;
+            font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+        header, main, nav, footer {
             margin: 40px auto 0 auto;
             margin-top: 15px;
             max-width: 650px;
-            color: #444;
-            background-color: #f5f5f5;
             padding: 0 10px;
-            font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         }
 
         h1,
@@ -23,10 +25,14 @@
             line-height: 1.2
         }
 
+        header h1 {
+            margin-bottom: 2px;
+        }
+
         nav {
             position: sticky;
             background-color: #f5f5f5;
-            border-bottom: 1px solid #bbb;
+            border-bottom: 1px #bbb solid;
             top: 0;
         }
 
@@ -38,9 +44,11 @@
             margin: 0;
             padding: 8px;
         }
+
         nav ul li {
             height: 35px;
         }
+
         nav ul li a {
             height: 100%;
             display: inline-block;
@@ -49,6 +57,16 @@
 
         nav ul li a:hover {
             text-decoration: underline;
+        }
+
+        .social-networks ul {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+        }
+        footer {
+            border-top: 1px #bbb solid;
+            text-align: center;
         }
     </style>
 </head>
@@ -64,32 +82,46 @@
     </nav>
     <header>
         <h1>Don Eber</h1>
-        <aside>This is my awesome website.</aside>
+        <aside><i>This is my awesome website.</i></aside>
     </header>
-    <p>I am just a dude, web developer, I like create content, play videogames and some sports and... I studied computer scientist career too.</p>
-    <p>Let me show you my social networks:</p>
-    <ul>
-        <li><strong>Twitter</strong> <a href="https://www.twitter.com/donEberDev">here</a>.</li>
-        <li><strong>YouTube</strong> <a href="https://www.youtube.com/donEber">here</a>.</li>
-        <li><strong>GitHub</strong> <a href="https://www.github.com/donEber">here</a>.</li>
-    </ul>
-    <h2 id="projects">Projects</h2>
-    <p>Recently I was working in:</p>
-    <ul>
-        <li><strong>Enfocate School</strong> in <a href="https://enfocate.doneber.dev">here</a></li>
-        <li><strong>Virtual hug</strong> in <a href="https://abrazo-virtual.doneber.dev">here</a></li>
-    </ul>
-    <h2 id="next">Next</h2>
-    <p>Coming soon:</p>
-    <ul>
-        <li>New videos on my <a href="https://www.youtube.com/donEber">YouTube Channel</a></li>
-        <li>Create my awesome blog, I'd like to write more and better</li>
-        <li>An awesome webpage</li>
-    </ul>
-    <h2 id="contact">Conctact</h2>
-    <p>You can email me at <a href="mailto: doneber.dev@gmail.com">doneber.dev@gmail.com</a></p>
-    <hr>
-    <p>©2022 doneber.dev. All Rights Reserved.</p>
+    <main>
+        <p>I am just a dude, web fullstack developer. I like create content, play videogames and some sports.</p>
+        <p>Let me show you my social networks:</p>
+        <div class="social-networks">
+            <ul>
+                <li><a href="https://www.twitter.com/donEberDev">Twitter</a></li>
+                <li><a href="https://www.youtube.com/donEber">YouTube</a></li>
+                <li><a href="https://www.github.com/donEber">GitHub</a></li>
+            </ul>
+        </div>
+        <h2 id="projects">Projects</h2>
+        <p>Recently I was working in:</p>
+        <ul>
+            <li>
+                <a href="https://enfocate.doneber.dev"><strong>Enfocate School</strong></a>
+                <p>A set of content to in a format as a School. We can find diferent Programming courses with fundamental topics to autodidact and college students.</p>
+            </li>
+            <li>
+                <a href="https://hug.doneber.dev"><strong>Virtual hug</strong></a>
+                <p>You can send a virtual hug with this page. We can personalize our virtual hug message in the <a href="https://hug.doneber.dev/dashboard">dashboard</a>. This project has simbolic purpose but it's funny. Try it out!</p>
+            </li>
+            <li>
+                <a href="https://doneber.dev"><strong>Don Eber Page</strong></a>
+                <p>This is my personal website, and I am going to improve it constantly. The aim isn't having a visual impact with awesome animations and full color. The aim is had all the information, simple and pleasant. You can find the source code in this <a href="https://github.com/doneber/doneber.github.io">GitHub repository</a>.</p>
+            </li>
+        </ul>
+        <h2 id="next">Next</h2>
+        <p>Coming soon:</p>
+        <ul>
+            <li>New videos on my <a href="https://www.youtube.com/donEber">YouTube Channel</a></li>
+            <li>Create my awesome blog, I'd like to write more and better.</li>
+        </ul>
+        <h2 id="contact">Conctact</h2>
+        <p>You can email me at <a href="mailto: doneber.dev@gmail.com">doneber.dev@gmail.com</a></p>
+    </main>
+    <footer>
+        <p>©2022 doneber.dev</p>
+    </footer>
 </body>
 
 </html>
