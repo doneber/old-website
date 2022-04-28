@@ -14,7 +14,7 @@
         }
 
         .dark-theme {
-            --color-background: #333;
+            --color-background: rgb(29 30 32);
             --color-text: #f5f5f5;
             --color-ancle-text: #f5f5f5;
         }
@@ -25,7 +25,6 @@
             font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         }
 
-        header,
         main,
         nav,
         footer {
@@ -49,13 +48,18 @@
             margin-bottom: 2px;
         }
 
-        nav {
+        body>header {
             position: sticky;
+            top: 0;
+            border-bottom: 1px #bbb solid;
+            background-color: var(--color-background);
+        }
+        body nav {
+            max-width: 900px;
+        }
+        body>header nav {
             display: flex;
             justify-content: space-between;
-            background-color: var(--color-background);
-            border-bottom: 1px #bbb solid;
-            top: 0;
         }
 
         nav .options {
@@ -108,21 +112,23 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="options">
-            <button id="darkModeBtn" onclick="changeTheme()">Dark mode</button>
-        </div>
-    </nav>
     <header>
-        <h1>Don Eber</h1>
-        <aside><i>This is my awesome website.</i></aside>
+        <nav>
+            <ul>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="options">
+                <button id="darkModeBtn" onclick="changeTheme()">Dark mode</button>
+            </div>
+        </nav>
     </header>
     <main>
+        <header>
+            <h1>Don Eber</h1>
+            <aside><i>This is my awesome website.</i></aside>
+        </header>
         <p>I am just a dude, web fullstack developer. I like create content, play videogames and some sports.</p>
         <p>Let me show you my social networks:</p>
         <div class="social-networks">
