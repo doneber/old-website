@@ -24,6 +24,9 @@ main {
     max-width: 650px;
     padding: 0 10px;
 }
+main header {
+    text-align: center;
+}
 
 header nav {
     margin: auto;
