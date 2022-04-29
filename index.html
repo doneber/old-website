@@ -6,109 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Don Eber</title>
-    <style type="text/css">
-        :root {
-            --color-background: #f5f5f5;
-            --color-text: #444;
-            --color-ancle-text: #00e;
-        }
-
-        .dark-theme {
-            --color-background: rgb(29 30 32);
-            --color-text: #f5f5f5;
-            --color-ancle-text: #f5f5f5;
-        }
-
-        body {
-            background-color: var(--color-background);
-            color: var(--color-text);
-            font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-        }
-
-        main,
-        nav,
-        footer {
-            margin: 40px auto 0 auto;
-            margin-top: 15px;
-            max-width: 650px;
-            padding: 0 10px;
-        }
-
-        h1,
-        h2,
-        h3 {
-            line-height: 1.2
-        }
-
-        a {
-            color: var(--color-ancle-text);
-        }
-
-        header h1 {
-            margin-bottom: 2px;
-        }
-
-        body>header {
-            position: sticky;
-            top: 0;
-            border-bottom: 1px #bbb solid;
-            background-color: var(--color-background);
-        }
-        body nav {
-            max-width: 900px;
-        }
-        body>header nav {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        nav .options {
-            padding: 8px;
-        }
-
-        nav .options button {
-            display: inline-block;
-            height: 90%;
-            background-color: var(--color-text);
-            color: var(--color-background);
-            cursor: pointer;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 16px;
-            margin: 0;
-            padding: 8px;
-        }
-
-        nav ul li {
-            height: 35px;
-        }
-
-        nav ul li a {
-            height: 100%;
-            display: inline-block;
-            color: var(--color-text);
-            text-decoration: none;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .social-networks ul {
-            display: flex;
-            gap: 15px;
-            list-style: none;
-            padding: 0;
-        }
-
-        footer {
-            border-top: 1px #bbb solid;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -130,21 +28,15 @@
             <aside><i>This is my awesome website.</i></aside>
         </header>
         <p>I am just a dude, web fullstack developer. I like create content, play videogames and some sports.</p>
-        <p>Let me show you my social networks:</p>
-        <div class="social-networks">
-            <ul>
-                <li><a href="https://www.twitter.com/donEberDev">Twitter</a></li>
-                <li><a href="https://www.youtube.com/donEber">YouTube</a></li>
-                <li><a href="https://www.github.com/donEber">GitHub</a></li>
-            </ul>
-        </div>
         <h2 id="projects">Projects</h2>
         <p>Recently I was working in:</p>
-        <ul>
+        <ul class="projects">
             <li>
-                <a href="https://enfocate.doneber.dev"><strong>Enfocate School</strong></a>
-                <p>A set of content to in a format as a School. We can find diferent Programming courses with
-                    fundamental topics to autodidact and college students.</p>
+                <a href="https://doneber.dev"><strong>Don Eber Website</strong></a>
+                <p>This is my personal website, and I am going to improve it constantly. The aim isn't having a visual
+                    impact with awesome animations and full color. The aim is had all the information, simple and
+                    pleasant. You can find the source code in this <a
+                        href="https://github.com/doneber/doneber.github.io">GitHub repository</a>.</p>
             </li>
             <li>
                 <a href="https://hug.doneber.dev"><strong>Virtual hug</strong></a>
@@ -153,11 +45,9 @@
                     it's funny. Try it out!</p>
             </li>
             <li>
-                <a href="https://doneber.dev"><strong>Don Eber Page</strong></a>
-                <p>This is my personal website, and I am going to improve it constantly. The aim isn't having a visual
-                    impact with awesome animations and full color. The aim is had all the information, simple and
-                    pleasant. You can find the source code in this <a
-                        href="https://github.com/doneber/doneber.github.io">GitHub repository</a>.</p>
+                <a href="https://enfocate.doneber.dev"><strong>Enfocate School</strong></a>
+                <p>A set of content to in a format as a School. We can find diferent Programming courses with
+                    fundamental topics to autodidact and college students.</p>
             </li>
         </ul>
         <h3>Next</h2>
@@ -167,6 +57,14 @@
                 <li>Create my awesome blog, I'd like to write more and better.</li>
             </ul>
             <h2 id="contact">Conctact</h2>
+            <p>Let me show you my social networks:</p>
+            <div class="social-networks">
+                <ul>
+                    <li><a href="https://www.twitter.com/donEberDev">Twitter</a></li>
+                    <li><a href="https://www.youtube.com/donEber">YouTube</a></li>
+                    <li><a href="https://www.github.com/donEber">GitHub</a></li>
+                </ul>
+            </div>
             <p>You can email me at <a href="mailto: doneber.dev@gmail.com">doneber.dev@gmail.com</a></p>
     </main>
     <footer>
