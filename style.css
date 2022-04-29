@@ -94,7 +94,7 @@ nav ul li a:hover {
 
 
 main ul.projects {
-    padding: 0 4px;
+    padding: 0;
 }
 main ul.projects li{
     background-color: var(--color-background-secondary);
