@@ -17,7 +17,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="options">
-                <button id="darkModeBtn" onclick="changeTheme()">Dark mode</button>
+                <button id="darkModeBtn">Dark mode</button>
             </div>
         </nav>
     </header>
@@ -68,17 +68,6 @@
         <p>©2022 Don Eber</p>
     </footer>
     <script type="module" src="/main.js"></script>
-    <script>
-        let darkMode = false
-        function changeTheme() {
-            if (darkMode)
-                document.getElementById('darkModeBtn').innerText = 'Dark mode'
-            else
-                document.getElementById('darkModeBtn').innerText = 'Light mode'
-            document.body.classList.toggle('dark-theme')
-            darkMode = !darkMode
-        }
-    </script>
 </body>
 
 </html>
