@@ -1,0 +1,25 @@
+{
+  "name": "doneber.github.io",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doneber/doneber.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doneber/doneber.github.io/issues"
+  },
+  "homepage": "https://github.com/doneber/doneber.github.io#readme",
+  "devDependencies": {
+    "vite": "^2.9.7"
+  }
+}
