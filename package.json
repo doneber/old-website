@@ -13,13 +13,14 @@
     "url": "git+https://github.com/doneber/doneber.github.io.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Don Eber",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/doneber/doneber.github.io/issues"
   },
   "homepage": "https://github.com/doneber/doneber.github.io#readme",
   "devDependencies": {
+    "postcss-nesting": "^10.1.4",
     "vite": "^2.9.7"
   }
 }
