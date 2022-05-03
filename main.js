@@ -1,6 +1,6 @@
 import './style.css'
 
-let darkMode = false
+let darkMode = true
 document.getElementById('darkModeBtn').addEventListener('click', function changeTheme() {
     if (darkMode)
         document.getElementById('darkModeBtn').innerText = 'Dark mode'
