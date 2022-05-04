@@ -1,13 +1,16 @@
 :root {
     --color-background: #f5f5f5;
     --color-text: #444;
+    --color-text-secondary: rgb(108 108 108);
     --color-ancle-text: #00e;
     --color-background-secondary: #fff;
+    --gap: 24px;
 }
 
 .dark-theme {
     --color-background: rgb(29 30 32);
-    --color-text: #f5f5f5;
+    --color-text: rgb(218 218 219);
+    --color-text-secondary: rgb(155 156 157);
     --color-ancle-text: rgb(252 200 63);
     --color-background-secondary: rgb(49 49 49);
 }
@@ -15,7 +18,8 @@
 h1,
 h2,
 h3 {
-    line-height: 1.2
+    line-height: 1.2;
+    text-align: center;
 }
 
 a {
@@ -31,23 +35,21 @@ body {
     &>header {
         position: sticky;
         top: 0;
-        border-bottom: 1px #bbb solid;
         background-color: var(--color-background);
 
         & nav {
             display: flex;
             justify-content: space-between;
             margin: auto;
-            max-width: 900px;
+            max-width: calc(1024px + var(--gap)*2);
+            line-height: 60px;
 
             & .options {
-                padding: 8px;
-
                 & button {
-                    display: inline-block;
-                    height: 90%;
                     background-color: var(--color-text);
                     color: var(--color-background);
+                    border: 2px solid transparent;
+                    border-radius: 3px;
                     cursor: pointer;
                 }
             }
@@ -56,12 +58,16 @@ body {
                 display: flex;
                 list-style: none;
                 gap: 16px;
-                margin: 0;
-                padding: 8px;
+                margin: auto var(--gap);
+                padding: 0;
             }
 
             & ul li {
                 line-height: 38px;
+            }
+            & ul li:first-child {
+                font-size: 24px;
+                font-weight: 700;
             }
 
             & ul li a {
@@ -80,7 +86,7 @@ body {
     & main {
         margin: auto;
         max-width: 650px;
-        padding: 0 10px;
+        padding: var(--gap);
 
         & header {
             text-align: center;
@@ -108,7 +114,12 @@ body {
     }
 
     & footer {
-        border-top: 1px #bbb solid;
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px){
+    :root {
+        --gap: 14px;
     }
 }
