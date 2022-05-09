@@ -51,6 +51,7 @@ body {
 
             & #themeOption {
                 cursor: pointer;
+                margin: auto var(--gap);
             }
 
             & ul {
