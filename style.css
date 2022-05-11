@@ -4,7 +4,7 @@
     --color-text: #444;
     --color-text-secondary: rgb(108 108 108);
     --color-ancle-text: #008;
-    --color-background-card: #fff;
+    --color-card: rgb(222, 222, 222);
     --gap-section: 10em;
     --gap: 24px;
 }
@@ -15,7 +15,7 @@
     --color-text: rgb(218 218 219);
     --color-text-secondary: rgb(155 156 157);
     --color-ancle-text: rgb(252 200 63);
-    --color-background-card: rgb(49 49 49);
+    --color-card: rgb(49 49 49);
 }
 
 h1,
@@ -124,7 +124,7 @@ body {
             }
     
             & ul li {
-                background-color: var(--color-background-card);
+                border: 3px solid var(--color-card);
                 padding: 16px;
                 margin: 12px 0;
                 border-radius: 6px;
