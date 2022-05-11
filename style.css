@@ -1,25 +1,30 @@
 :root {
     --color-background: #f5f5f5;
+    --color-background-secondary: #f0f0f0;
     --color-text: #444;
     --color-text-secondary: rgb(108 108 108);
     --color-ancle-text: #008;
-    --color-background-secondary: #fff;
+    --color-background-card: #fff;
+    --gap-section: 10em;
     --gap: 24px;
 }
 
 .dark-theme {
     --color-background: rgb(29 30 32);
+    --color-background-secondary: rgb(20, 21, 23);
     --color-text: rgb(218 218 219);
     --color-text-secondary: rgb(155 156 157);
     --color-ancle-text: rgb(252 200 63);
-    --color-background-secondary: rgb(49 49 49);
+    --color-background-card: rgb(49 49 49);
 }
 
 h1,
 h2,
 h3 {
+    margin: 0;
     line-height: 1.2;
     text-align: center;
+    font-size: 2.5em;
 }
 
 a {
@@ -27,11 +32,21 @@ a {
 }
 
 .hero, .projects, .contact {
-    padding: 5em 0;
+    padding: var(--gap-section) 0;
+}
+
+.hero {
+    & h1 {
+        font-size: 3.5em;
+    }
+    & aside {
+        color: rgb(169, 169, 169);
+    }
 }
 
 body {
-    background-color: var(--color-background);
+    background: linear-gradient(var(--color-background), var(--color-background-secondary));
+    background-attachment: fixed;
     color: var(--color-text);
     font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     margin: 0;
@@ -109,7 +124,7 @@ body {
             }
     
             & ul li {
-                background-color: var(--color-background-secondary);
+                background-color: var(--color-background-card);
                 padding: 16px;
                 margin: 12px 0;
                 border-radius: 6px;
@@ -150,5 +165,11 @@ body {
 @media screen and (max-width: 768px){
     :root {
         --gap: 14px;
+        --gap-section: 5em;
+    }
+    .hero {
+        & h1 {
+            font-size: 3em;
+        }
     }
 }
