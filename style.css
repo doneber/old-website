@@ -14,7 +14,7 @@ html {
 
 .dark-theme {
     --color-background: rgb(29 30 32);
-    --color-background-secondary: rgb(20, 21, 23);
+    --color-background-secondary: rgb(15, 17, 18);
     --color-text: rgb(218 218 219);
     --color-text-secondary: rgb(155 156 157);
     --color-ancle-text: rgb(252 200 63);
@@ -40,6 +40,14 @@ a {
 
 .hero, .projects, .contact {
     padding: var(--gap-section) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section:nth-child(odd) {
+    box-sizing: border-box;
+    min-height: calc(90vh);
 }
 
 .hero {
@@ -112,17 +120,17 @@ body {
     & main {
         margin: auto;
         max-width: 650px;
-        padding: var(--gap);
+        padding: 0 var(--gap);
         
-        & header {
+        & .hero {
             text-align: center;
-
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 32vh;
             & h1 {
                 margin-bottom: 2px;
             }
-        }
-        & ul {
-            padding: 0;
         }
 
         & .projects {
@@ -142,6 +150,7 @@ body {
                 font-size: 16px;
             }
         }
+
         & .contact {
             & > p {
                 text-align: center;
@@ -153,10 +162,10 @@ body {
                     display: flex;
                     list-style: none;
                     & li {
-                        margin: 0 12px;
+                        margin: 0 14px;
                         & svg {
-                            height: 26px;
-                            width: 26px;
+                            height: 32px;
+                            width: 32px;
                         }
                     }
                 }
