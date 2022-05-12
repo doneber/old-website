@@ -31,6 +31,10 @@ a {
     color: var(--color-ancle-text);
 }
 
+.underline {
+    border-bottom: solid 3px;
+}
+
 .hero, .projects, .contact {
     padding: var(--gap-section) 0;
 }
@@ -82,7 +86,7 @@ body {
             }
 
             & ul li {
-                line-height: 38px;
+                line-height: 28px;
             }
             & ul li:first-child {
                 font-size: 24px;
@@ -97,7 +101,7 @@ body {
             }
 
             & ul li a:hover {
-                text-decoration: underline;
+                border-bottom: solid 3px rgba(128,128,128,.3);
             }
         }
     }
