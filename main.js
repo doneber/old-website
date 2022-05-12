@@ -1,10 +1,9 @@
 import './style.css'
 
-function changeTheme() {
+document.querySelector('#themeOption').addEventListener('click', () => {
     document.body.classList.toggle('dark-theme')
-}
+})
 
-document.querySelector('#themeOption').addEventListener('click', changeTheme)
 const [home, projects, about] = [
     document.querySelector('#home'),
     document.querySelector('#projects'),
