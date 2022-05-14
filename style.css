@@ -6,7 +6,7 @@ html {
     --color-background-secondary: #f0f0f0;
     --color-text: #444;
     --color-text-secondary: rgb(108 108 108);
-    --color-ancle-text: #008;
+    --color-primary: #008;
     --color-card: rgb(222, 222, 222);
     --gap-section: 10em;
     --gap: 24px;
@@ -17,7 +17,7 @@ html {
     --color-background-secondary: rgb(15, 17, 18);
     --color-text: rgb(218 218 219);
     --color-text-secondary: rgb(155 156 157);
-    --color-ancle-text: rgb(252 200 63);
+    --color-primary: rgb(252 200 63);
     --color-card: rgb(49 49 49);
 }
 
@@ -28,14 +28,15 @@ h3 {
     line-height: 1.2;
     text-align: center;
     font-size: 2.5em;
+    color: var(--color-text);
 }
 
 a {
-    color: var(--color-ancle-text);
+    color: var(--color-primary);
 }
 
 .underline {
-    border-bottom: solid 3px;
+    border-bottom: solid 3px var(--color-primary);
 }
 
 .hero, .projects, .contact {
@@ -48,15 +49,6 @@ a {
 section:nth-child(odd) {
     box-sizing: border-box;
     min-height: calc(90vh);
-}
-
-.hero {
-    & h1 {
-        font-size: 3.5em;
-    }
-    & aside {
-        color: rgb(169, 169, 169);
-    }
 }
 
 body {
@@ -122,7 +114,7 @@ body {
         max-width: 650px;
         padding: 0 var(--gap);
         
-        & .hero {
+        & section.hero {
             text-align: center;
             display: flex;
             justify-content: center;
@@ -130,8 +122,13 @@ body {
             padding-bottom: 32vh;
             & h1 {
                 margin-bottom: 2px;
+                font-size: 3.5em;
+                color: var(--color-primary);
+                & aside {
+                    color: rgb(169, 169, 169);
+                }
             }
-        }
+        }        
 
         & .projects {
             & ul {
