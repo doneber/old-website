@@ -20,6 +20,9 @@ html {
     --color-primary: rgb(252 200 63);
     --color-card: rgb(49 49 49);
 }
+svg#menu {
+    display: none;
+}
 
 h1,
 h2,
@@ -183,6 +186,45 @@ body {
     .hero {
         & h1 {
             font-size: 3em;
+        }
+    }
+    svg#menu {
+        display: block;
+        margin: auto var(--gap);
+    }
+    nav {
+        position: relative;
+        box-sizing: border-box;
+        height: 60px;
+    }
+
+    #themeOption {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu {
+        display: none;
+        margin: 0;
+        padding: var(--gap) calc(var(--gap)*2);
+        box-sizing: border-box;
+        width: 100%;
+        background-color: var(--color-background);;
+        background: blu;
+        position: absolute;
+        top: 60px;
+    }
+    .display-menu {
+        display: flex;
+    }
+    body header nav{
+        & ul {
+            margin: var(--gap);
+            flex-direction: column;
+        }
+        & div#themeOption {
+
+            margin: var(--gap);
         }
     }
 }

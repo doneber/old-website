@@ -3,6 +3,10 @@ import './style.css'
 document.querySelector('#themeOption').addEventListener('click', () => {
   document.body.classList.toggle('dark-theme')
 })
+const menu = document.querySelector('.menu')
+document.querySelector('#menu').addEventListener('click', () => {
+  menu.classList.toggle('display-menu')
+})
 
 const [home, projects, about] = [
   document.querySelector('#home'),
