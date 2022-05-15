@@ -23,9 +23,11 @@ const [home, projects, about] = [
   document.querySelector('#projects'),
   document.querySelector('#contact')
 ]
+const downBtn = document.querySelector('#down')
 const navAncleItems = [...document.querySelectorAll('body header nav ul li')].map(el => el.firstChild)
 const calcOffsetTop = (el) => el.getBoundingClientRect().top
 window.onscroll = function () {
+  window.pageYOffset > 60 ? downBtn.classList.add('hide') : downBtn.classList.remove('hide')
   if (calcOffsetTop(home) <= 60) {
     navAncleItems[2].classList.remove('underline')
     navAncleItems[3].classList.remove('underline')
