@@ -3,9 +3,19 @@ import './style.css'
 document.querySelector('#themeOption').addEventListener('click', () => {
   document.body.classList.toggle('dark-theme')
 })
+
 const menu = document.querySelector('.menu')
-document.querySelector('#menu').addEventListener('click', () => {
+document.querySelector('#menu').addEventListener('click', e => {
   menu.classList.toggle('display-menu')
+  e.stopImmediatePropagation()
+})
+
+window.addEventListener('click', (e) => {
+  if (!menu.classList.contains('display-menu')) return
+  if (!menu.contains(e.target)) {
+    menu.classList.remove('display-menu')
+    e.stopImmediatePropagation()
+  }
 })
 
 const [home, projects, about] = [
