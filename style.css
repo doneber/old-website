@@ -91,8 +91,10 @@ body {
         backdrop-filter: blur(4px);
 
         & nav {
+            height: 100%;
             display: flex;
             justify-content: space-between;
+            align-items: flex-start;
             margin: auto;
             max-width: calc(1024px + var(--gap)*2);
             line-height: 60px;
@@ -209,7 +211,10 @@ body {
     }
     svg#menu {
         display: block;
-        margin: auto var(--gap);
+        height: 32px;
+        width: 32px;
+        box-sizing: border-box;
+        margin: var(--gap);
     }
     nav {
         position: relative;
@@ -224,14 +229,7 @@ body {
     }
     .menu {
         display: none;
-        margin: 0;
-        padding: var(--gap) calc(var(--gap)*3);
-        box-sizing: border-box;
-        width: 100%;
-        background-color: var(--color-background);;
-        background: blu;
-        position: absolute;
-        top: 60px;
+        margin-top: 60px;
     }
     .display-menu {
         display: flex;
