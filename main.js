@@ -24,10 +24,12 @@ const [home, projects, about] = [
   document.querySelector('#contact')
 ]
 const downBtn = document.querySelector('#down')
+const navBar = document.querySelector('body header nav')
 const navAncleItems = [...document.querySelectorAll('body header nav ul li')].map(el => el.firstChild)
 const calcOffsetTop = (el) => el.getBoundingClientRect().top
 window.onscroll = function () {
   window.pageYOffset > 60 ? downBtn.classList.add('hide') : downBtn.classList.remove('hide')
+  window.pageYOffset > 60 ? navBar.classList.add('line-shadow') : navBar.classList.remove('line-shadow')
   if (calcOffsetTop(home) <= 60) {
     navAncleItems[2].classList.remove('underline')
     navAncleItems[3].classList.remove('underline')
