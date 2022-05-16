@@ -18,31 +18,39 @@ window.addEventListener('click', (e) => {
   }
 })
 
-const [home, projects, about] = [
-  document.querySelector('#home'),
-  document.querySelector('#projects'),
-  document.querySelector('#contact')
-]
 const downBtn = document.querySelector('#down')
 const navBar = document.querySelector('body header nav')
 const navAncleItems = [...document.querySelectorAll('body header nav ul li')].map(el => el.firstChild)
 const calcOffsetTop = (el) => el.getBoundingClientRect().top
+const sections = [...document.querySelectorAll('main section')]
+const calcCurrentIndexSection = function () {
+  const sectionOffsets = sections.map(section => Math.trunc(Math.abs(calcOffsetTop(section))))
+  const min = Math.min(...sectionOffsets)
+  return sectionOffsets.indexOf(min)
+}
+let initIndexSection = calcCurrentIndexSection()
+navAncleItems.forEach(item => item.classList.remove('underline'))
+navAncleItems[initIndexSection + 1].classList.add('underline')
 window.onscroll = function () {
-  window.pageYOffset > 60 ? downBtn.classList.add('hide') : downBtn.classList.remove('hide')
-  window.pageYOffset > 60 ? navBar.classList.add('line-shadow') : navBar.classList.remove('line-shadow')
-  if (calcOffsetTop(home) <= 60) {
-    navAncleItems[2].classList.remove('underline')
-    navAncleItems[3].classList.remove('underline')
-    navAncleItems[1].classList.add('underline')
+  const currentIndexSection = calcCurrentIndexSection()
+  if (initIndexSection !== currentIndexSection) {
+    navAncleItems.forEach(item => item.classList.remove('underline'))
+    navAncleItems[currentIndexSection + 1].classList.add('underline')
+    initIndexSection = currentIndexSection
   }
-  if (calcOffsetTop(projects) <= 60) {
-    navAncleItems[2].classList.add('underline')
-    navAncleItems[1].classList.remove('underline')
-    navAncleItems[3].classList.remove('underline')
-  }
-  if (calcOffsetTop(about) <= 60) {
-    navAncleItems[3].classList.add('underline')
-    navAncleItems[1].classList.remove('underline')
-    navAncleItems[2].classList.remove('underline')
+  if (window.pageYOffset > 60) {
+    if (!downBtn.classList.contains('hide')) {
+      downBtn.classList.add('hide')
+    }
+    if (!navBar.classList.contains('line-shadow')) {
+      navBar.classList.add('line-shadow')
+    }
+  } else {
+    if (downBtn.classList.contains('hide')) {
+      downBtn.classList.remove('hide')
+    }
+    if (navBar.classList.contains('line-shadow')) {
+      navBar.classList.remove('line-shadow')
+    }
   }
 }
