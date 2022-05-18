@@ -5,14 +5,38 @@ document.querySelector('#themeOption').addEventListener('click', () => {
 })
 
 const menu = document.querySelector('.menu')
+let displayMenu = false
 document.querySelector('#menu').addEventListener('click', e => {
   menu.classList.toggle('display-menu')
+  if (displayMenu) {
+    document.querySelector('#line1').style.setProperty('transform', 'translatey(0)')
+    document.querySelector('#line4').style.setProperty('transform', 'translatey(0)')
+    document.querySelector('#line1').style.setProperty('opacity', '1')
+    document.querySelector('#line4').style.setProperty('opacity', '1')
+    document.querySelector('#line2').style.setProperty('transform', 'rotate(0) ')
+    document.querySelector('#line3').style.setProperty('transform', 'rotate(0) ')
+  } else {
+    document.querySelector('#line1').style.setProperty('transform', 'translatey(25%)')
+    document.querySelector('#line4').style.setProperty('transform', 'translatey(-25%)')
+    document.querySelector('#line1').style.setProperty('opacity', '0')
+    document.querySelector('#line4').style.setProperty('opacity', '0')
+    document.querySelector('#line2').style.setProperty('transform', 'rotate(40deg)')
+    document.querySelector('#line3').style.setProperty('transform', 'rotate(-40deg)')
+  }
+  displayMenu = !displayMenu
   e.stopImmediatePropagation()
 })
 
 window.addEventListener('click', (e) => {
   if (!menu.classList.contains('display-menu')) return
   if (!menu.contains(e.target)) {
+    document.querySelector('#line1').style.setProperty('transform', 'translatey(0)')
+    document.querySelector('#line4').style.setProperty('transform', 'translatey(0)')
+    document.querySelector('#line1').style.setProperty('opacity', '1')
+    document.querySelector('#line4').style.setProperty('opacity', '1')
+    document.querySelector('#line2').style.setProperty('transform', 'rotate(0) ')
+    document.querySelector('#line3').style.setProperty('transform', 'rotate(0) ')
+    displayMenu = false
     menu.classList.remove('display-menu')
     e.stopImmediatePropagation()
   }

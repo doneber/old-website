@@ -22,7 +22,19 @@ html {
 }
 svg#menu {
     display: none;
+    & line {
+        stroke: var(--color-text);
+    }
 }
+
+#line2, #line3 {
+    transition: all .2s ease;
+    transform-origin: 50% 50% 0;
+}
+#line1, #line4 {
+    transition: all .1s ease-out;
+}
+
 svg#down {
     position: fixed;
     margin: auto;
@@ -30,12 +42,12 @@ svg#down {
     right: 0;
     bottom: 20px;
     height: 18px;
-    animation: heart 1s infinite ease-out alternate;
-    opacity: .5;
+    animation: heart .6s infinite ease alternate;
+    opacity: .8;
 }
 @keyframes heart {
     0% {
-        transform: translate(0,-4px);
+        transform: translate(0,-5px);
     }
 }
 .hide {
@@ -117,6 +129,7 @@ body {
 
             & ul li {
                 line-height: 28px;
+                font-size: 16px;
             }
             & ul li:first-child {
                 font-size: 24px;
@@ -255,7 +268,7 @@ body {
     .menu {
         display: none;
         margin-top: 60px;
-
+        text-align: center;
     }
     .display-menu {
         display: flex;
