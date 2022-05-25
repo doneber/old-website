@@ -5,9 +5,10 @@ document.querySelector('#themeOption').addEventListener('click', () => {
 })
 
 const menu = document.querySelector('.menu')
+const header = document.querySelector('body header')
 let displayMenu = false
 document.querySelector('#menu').addEventListener('click', e => {
-  menu.classList.toggle('display-menu')
+  header.classList.toggle('display-header-menu')
   if (displayMenu) {
     document.querySelector('#line1').style.setProperty('transform', 'translatey(0)')
     document.querySelector('#line4').style.setProperty('transform', 'translatey(0)')
@@ -28,8 +29,8 @@ document.querySelector('#menu').addEventListener('click', e => {
 })
 
 window.addEventListener('click', (e) => {
-  if (!menu.classList.contains('display-menu')) return
-  if (!menu.contains(e.target)) {
+  if (!header.classList.contains('display-header-menu')) return
+  if (!header.contains(e.target)) {
     document.querySelector('#line1').style.setProperty('transform', 'translatey(0)')
     document.querySelector('#line4').style.setProperty('transform', 'translatey(0)')
     document.querySelector('#line1').style.setProperty('opacity', '1')
@@ -37,7 +38,7 @@ window.addEventListener('click', (e) => {
     document.querySelector('#line2').style.setProperty('transform', 'rotate(0) ')
     document.querySelector('#line3').style.setProperty('transform', 'rotate(0) ')
     displayMenu = false
-    menu.classList.remove('display-menu')
+    header.classList.remove('display-header-menu')
     e.stopImmediatePropagation()
   }
 })

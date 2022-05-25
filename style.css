@@ -100,6 +100,7 @@ body {
         display: none;
     }
     &>header {
+        height: 60px;
         position: sticky;
         top: 0;
         background-color: var(--color-nav);
@@ -242,6 +243,18 @@ body {
 }
 
 @media screen and (max-width: 768px){
+    body > header {
+        transition: .3s;
+        &:not(:not(.display-header-menu)) .menu {
+            transition: .3s ;
+            transform: translateY(0);
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    .display-header-menu {
+        height: 290px;
+    }
     :root {
         --gap: 14px;
         --gap-section: 5em;
@@ -270,12 +283,11 @@ body {
         justify-content: center;
     }
     .menu {
-        display: none;
         margin-top: 60px;
         text-align: center;
-    }
-    .display-menu {
-        display: flex;
+        transform: translateY(-100%);
+        visibility: hidden;
+        opacity: 0;
     }
     body header nav{
         & ul {
