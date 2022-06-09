@@ -4,7 +4,6 @@ document.querySelector('#themeOption').addEventListener('click', () => {
   document.body.classList.toggle('dark-theme')
 })
 
-const menu = document.querySelector('.menu')
 const header = document.querySelector('body header')
 let displayMenu = false
 document.querySelector('#menu').addEventListener('click', e => {
