@@ -103,7 +103,6 @@ body {
         & nav {
             height: 100%;
             display: flex;
-            justify-content: space-between;
             align-items: flex-start;
             margin: auto;
             max-width: calc(1024px + var(--gap)*2);
@@ -117,7 +116,26 @@ body {
                     stroke: var(--color-text);
                 }
             }
+            & .icon {
+                width: 100%;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+                font-weight: 600;
+                font-size: 1.2em;
+                margin: auto var(--gap);
+                & img {
+                    width: 1.8em;
+                    height: 1.8em;
+                }
+            }
             & #themeOption {
+                /* box-sizing: border-box; */
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
                 margin: auto var(--gap);
                 & button#sun, & button#moon {
                     background-color: transparent;
@@ -128,32 +146,33 @@ body {
             }
 
             & ul {
+                width: 100%;
                 display: flex;
                 list-style: none;
                 gap: 16px;
                 margin: auto var(--gap);
                 padding: 0;
+                & li {
+                    line-height: 28px;
+                    font-size: 16px;
+                    &:first-child {
+                        font-size: 24px;
+                        font-weight: 700;
+                    }
+                    & a {
+                        height: 100%;
+                        display: inline-block;
+                        color: var(--color-text);
+                        text-decoration: none;
+                        &:hover {
+                            border-bottom: solid 3px rgba(128,128,128,.3);
+                        }
+                    }
+        
+
+                }
             }
 
-            & ul li {
-                line-height: 28px;
-                font-size: 16px;
-            }
-            & ul li:first-child {
-                font-size: 24px;
-                font-weight: 700;
-            }
-
-            & ul li a {
-                height: 100%;
-                display: inline-block;
-                color: var(--color-text);
-                text-decoration: none;
-            }
-
-            & ul li a:hover {
-                border-bottom: solid 3px rgba(128,128,128,.3);
-            }
         }
     }
 
@@ -269,28 +288,38 @@ body {
                 position: relative;
                 box-sizing: border-box;
                 height: 60px;
-                & button#menu {
-                    display: block;
-                    height: 32px;
-                    width: 32px;
-                    box-sizing: border-box;
-                    margin: var(--gap);
+                & .nav-left {
+                    width: 100%;
+                    & button#menu {
+                        display: block;
+                        height: 32px;
+                        width: 32px;
+                        box-sizing: border-box;
+                        margin: var(--gap);
+                    }
                 }
                 & ul {
                     margin: var(--gap);
                     flex-direction: column;
                 }
                 & div#themeOption {
-                    margin: var(--gap);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    width: max-content;
+                    /* margin: var(--gap); */
                 }
             }
         }
     }
     .display-header-menu {
         height: 290px;
+    }
+    .icon {
+        & span {
+            display: none;
+            font-size: .7em;
+        }
+    }
+    .nav-left {
+        width: auto !important;
     }
     .hero {
         & h1 {
@@ -303,5 +332,13 @@ body {
         transform: translateY(-100%);
         visibility: hidden;
         opacity: 0;
+    }
+    .menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: max-content;
+        margin: auto;
     }
 }
