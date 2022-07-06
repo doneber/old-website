@@ -6,19 +6,19 @@ html {
     --color-nav: rgb(240, 240, 240, .5);
     --color-text: #444;
     --color-text-secondary: rgb(108 108 108);
-    --color-primary: #008;
-    --color-card: rgb(222, 222, 222);
+    --color-primary: #27496D;
+    --color-card: rgba(39, 73, 109, .5);
     --gap-section: 10em;
     --gap: 24px;
 }
 
 .dark-theme {
-    --color-background: rgb(29, 30, 32);
-    --color-nav: rgba(29, 30, 32, .5);
+    --color-background: #27496D;
+    --color-nav: rgba(39, 73, 109, 0);
     --color-text: rgb(218 218 219);
     --color-text-secondary: rgb(155 156 157);
-    --color-primary: rgb(252 200 63);
-    --color-card: rgb(49 49 49);
+    --color-primary: whitesmoke;
+    --color-card: rgba(218, 218, 219, .3);
 }
 
 #line2, #line3 {
