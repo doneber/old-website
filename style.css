@@ -50,7 +50,11 @@ svg#down {
 .line-shadow {
     box-shadow: inset 0 -1px 0 0 hsla(0,0%,100%,.1);
 }
-
+hr {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    opacity: 20%;
+}
 h1,
 h2,
 h3 {
@@ -78,14 +82,15 @@ a {
 }
 section:nth-child(odd) {
     box-sizing: border-box;
-    min-height: calc(90vh);
+    min-height: calc(80vh);
 }
 
 body {
     background: var(--color-background);
     background-attachment: fixed;
     color: var(--color-text);
-    font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 18px;
     margin: 0;
     &:not(.dark-theme) #sun{
         display: none;
@@ -121,14 +126,15 @@ body {
                 text-decoration: none;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: start;
                 gap: 6px;
                 font-weight: 600;
-                font-size: 1.2em;
+                font-size: 24px;
                 margin: auto var(--gap);
                 & img {
-                    width: 1.8em;
-                    height: 1.8em;
+                    width: 1.5em;
+                    height: 1.5em;
+                    margin: 0 3px;
                 }
             }
             & #themeOption {
@@ -155,10 +161,6 @@ body {
                 & li {
                     line-height: 28px;
                     font-size: 16px;
-                    &:first-child {
-                        font-size: 24px;
-                        font-weight: 700;
-                    }
                     & a {
                         height: 100%;
                         display: inline-block;
@@ -168,11 +170,8 @@ body {
                             border-bottom: solid 3px rgba(128,128,128,.3);
                         }
                     }
-        
-
                 }
             }
-
         }
     }
 
@@ -273,7 +272,6 @@ body {
         --gap: 14px;
         --gap-section: 5em;
     }
-
     body {
         & header {
             transition: .3s;
@@ -283,7 +281,6 @@ body {
                 visibility: visible;
                 opacity: 1;
             }
-
             & nav {
                 position: relative;
                 box-sizing: border-box;
@@ -301,6 +298,9 @@ body {
                 & ul {
                     margin: var(--gap);
                     flex-direction: column;
+                }
+                & hr {
+                    width: 33%;
                 }
                 & div#themeOption {
                     width: max-content;
@@ -340,5 +340,6 @@ body {
         right: 0;
         width: max-content;
         margin: auto;
+        width: 100%;
     }
 }

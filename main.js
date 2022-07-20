@@ -54,27 +54,29 @@ const calcCurrentIndexSection = function () {
 }
 let initIndexSection = calcCurrentIndexSection()
 navAncleItems.forEach(item => item.classList.remove('underline'))
-navAncleItems[initIndexSection + 1].classList.add('underline')
+navAncleItems[initIndexSection].classList.add('underline')
 window.onscroll = function () {
   const currentIndexSection = calcCurrentIndexSection()
   if (initIndexSection !== currentIndexSection) {
     navAncleItems.forEach(item => item.classList.remove('underline'))
-    navAncleItems[currentIndexSection + 1].classList.add('underline')
+    navAncleItems[currentIndexSection].classList.add('underline')
     initIndexSection = currentIndexSection
   }
   if (window.pageYOffset > 60) {
     if (!downBtn.classList.contains('hide')) {
       downBtn.classList.add('hide')
     }
-    if (!navBar.classList.contains('line-shadow')) {
-      navBar.classList.add('line-shadow')
+    if (!header.classList.contains('line-shadow')) {
+      // navBar.classList.add('line-shadow')
+      header.classList.add('line-shadow')
     }
   } else {
     if (downBtn.classList.contains('hide')) {
       downBtn.classList.remove('hide')
     }
-    if (navBar.classList.contains('line-shadow')) {
-      navBar.classList.remove('line-shadow')
+    if (header.classList.contains('line-shadow')) {
+      // navBar.classList.remove('line-shadow')
+      header.classList.remove('line-shadow')
     }
   }
 }
