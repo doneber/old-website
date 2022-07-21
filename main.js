@@ -1,4 +1,27 @@
 import './style.css'
+import data from './data.json'
+
+const pc = document.querySelector('#projects-container')
+data.projects.forEach(project => {
+  const projectContainer = document.createElement('li')
+  projectContainer.classList.add('card')
+  projectContainer.innerHTML = `
+    ${project.img ? '<img src="' + project.img + '" alt="" class="card-img">' : ''}
+    <div class="card-content">
+        <h3 class="card-content-title">
+            ${project.title}
+        </h3>
+        <p class="card-content-description">
+            ${project.description}
+        </p>
+        <div class="card-content-options">
+            ${project.url ? '<a href="' + project.url + '">Demo</a>' : ''}
+            ${project.github ? '<a href="' + project.github + '">GitHub</a>' : ''}
+        </div>
+    </div>
+  `
+  pc.append(projectContainer)
+})
 
 document.querySelector('#themeOption').addEventListener('click', () => {
   document.body.classList.toggle('dark-theme')
@@ -43,7 +66,6 @@ window.addEventListener('click', (e) => {
 })
 
 const downBtn = document.querySelector('#down')
-const navBar = document.querySelector('body header nav')
 const navAncleItems = [...document.querySelectorAll('body header nav ul li')].map(el => el.firstChild)
 const calcOffsetTop = (el) => el.getBoundingClientRect().top
 const sections = [...document.querySelectorAll('main section')]
