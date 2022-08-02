@@ -1,22 +1,22 @@
 {
     "projects" : [
         {
-            "title":"Don Eber Website",
-            "description":"This is my personal website, and I am going to improve it constantly.",
-            "img": "./donEberIcon.svg",
+            "title":"Don Eber Web",
+            "description":"This page run as personal website and portfolio. I improve it constantly and apply different interesting tools for web performance in it. You'll see everything about me as developer",
+            "img": "screenshots/doneber-page.jpg",
             "url": "https://raw.githubusercontent.com/doneber/doneber.github.io/main/donEberIcon.svg",
             "github": "https://github.com/doneber/doneber.github.io"
         },
         {
             "title": "Virtual hug",
-            "description": "You can send a virtual hug with this page. We can personalize our virtual hug message in the dashboard. This project has simbolic purpose but it's funny. Try it out! ",
-            "img": "",
+            "description": "You can send a virtual hug with this page. We can personalize our virtual hug message in the dashboard. This project has symbolic purpose, but it's funny. Try it out! ",
+            "img": "screenshots/abrazo-virtual.jpg",
             "url": "https://hug.doneber.dev"
         },
         {
             "title": "Enfocate School",
-            "description": "A set of content to in a format as a School. We can find diferent Programming courses with fundamental topics to autodidact and college students.",
-            "img": "",
+            "description": "A set of content to in a format as a School. We can find different programming courses with fundamental topics to autodidact and college students.",
+            "img": "screenshots/enfocate.jpg",
             "url": "https://enfocate.doneber.dev"
         }
     ]

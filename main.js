@@ -3,6 +3,7 @@ import data from './data.json'
 
 const pc = document.querySelector('#projects-container')
 data.projects.forEach(project => {
+  console.log('title', project.title)
   const projectContainer = document.createElement('li')
   projectContainer.classList.add('card')
   projectContainer.innerHTML = `
