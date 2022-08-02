@@ -91,21 +91,21 @@ a {
     height: 200px;
     display: flex;
     box-shadow: 0px 2px 4px 0px #00000040;
-    & .card-img {
+    .card-img {
         width: 100%;
         max-width: 40%;
         min-width: 40%;
         height: 100%;
         background-color: var(--color-background);
     }
-    & .card-content {
+    .card-content {
         padding: 15px;
         color: #444;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
-        & .card-content-title {
+        .card-content-title {
             height: 25%;
             color: var(--color-background);
             line-height: 1em;
@@ -113,15 +113,15 @@ a {
             font-weight: 500;
             margin: 0;
         }
-        & .card-content-description {
+        .card-content-description {
             height: 50%;
             font-size: 1rem;
         }
-        & .card-content-options {
+        .card-content-options {
             height: 25%;
             display: flex;
             align-items: center;
-            & a {
+            a {
                 color: #f5f5f5;
                 background-color: var(--color-background);
                 padding: 5px .65em;
@@ -129,7 +129,7 @@ a {
                 border-radius: 4px;
                 box-shadow: 0px 2px 4px 0px #00000040;
             }
-            & a:hover {
+            a:hover {
                 opacity: .9;
             }
         }
@@ -148,36 +148,36 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 18px;
     margin: 0;
-    &:not(.dark-theme) #sun{
+    :not(.dark-theme) #sun{
         display: none;
     }
-    &:not(:not(.dark-theme)) #moon{
+    :not(:not(.dark-theme)) #moon{
         display: none;
     }
-    &>header {
+    >header {
         height: 60px;
         position: sticky;
         top: 0;
         background-color: var(--color-nav);
         backdrop-filter: blur(4px);
 
-        & nav {
+        nav {
             height: 100%;
             display: flex;
             align-items: flex-start;
             margin: auto;
             max-width: calc(1024px + var(--gap)*2);
             line-height: 60px;
-            & button#menu {
+            button#menu {
                 background-color: transparent;
                 border: 0;
                 padding: 0;
                 display: none;
-                & svg line {
+                svg line {
                     stroke: var(--color-text);
                 }
             }
-            & .icon {
+            .icon {
                 width: 100%;
                 display: flex;
                 align-items: center;
@@ -186,19 +186,19 @@ body {
                 font-weight: 600;
                 font-size: 24px;
                 margin: auto var(--gap);
-                & img {
+                img {
                     width: 1.5em;
                     height: 1.5em;
                     margin: 0 3px;
                 }
             }
-            & #themeOption {
+            #themeOption {
                 /* box-sizing: border-box; */
                 width: 100%;
                 display: flex;
                 justify-content: flex-end;
                 margin: auto var(--gap);
-                & button#sun, & button#moon {
+                button#sun, button#moon {
                     background-color: transparent;
                     border: 0;
                     padding: 0;
@@ -206,20 +206,20 @@ body {
                 }
             }
 
-            & ul {
+            ul {
                 width: 100%;
                 display: flex;
                 gap: 16px;
                 margin: auto var(--gap);
                 padding: 0;
-                & li {
+                li {
                     line-height: 28px;
                     font-size: 16px;
-                    & a {
+                    a {
                         height: 100%;
                         display: inline-block;
                         color: var(--color-text);
-                        &:hover {
+                        :hover {
                             border-bottom: solid 3px rgba(128,128,128,.3);
                         }
                     }
@@ -228,78 +228,78 @@ body {
         }
     }
 
-    & main {
+    main {
         margin: auto;
         max-width: 650px;
         padding: 0 var(--gap);
-        & section.hero {
+        section.hero {
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
             padding-bottom: 32vh;
-            & h1 {
+            h1 {
                 margin-bottom: 2px;
                 font-size: 3.5em;
                 color: var(--color-primary);
-                & aside {
+                aside {
                     color: rgb(169, 169, 169);
                 }
             }
         }        
 
-        & .projects {
-            & ul {
+        .projects {
+            ul {
                 padding: 0;
             }
     
-            & ul li {
+            ul li {
                 margin: 12px 0;
                 border-radius: 13px;
             }
     
-            & ul li p {
+            ul li p {
                 font-size: 16px;
             }
         }
-        & .skills {
+        .skills {
             align-items: center;
             text-align: center;
-            & ul {
+            ul {
                 padding: 0;
-                & li {
+                li {
                     display: inline-flex;
                     flex-direction: column;
                     gap: 7px;
                     margin: 18px;
                     text-align: center;
                     }
-                    & img {
+                    img {
                         width: 64px;
                         transition: .3s;
                     }
-                    & img:hover {
+                    img:hover {
                         transform: scale(1.15);
                     }
                 }
         }
 
-        & .contact {
-            & > p {
+        .contact {
+            > p {
                 text-align: center;
             }
-            & .social-networks {
+            .social-networks {
                 display: flex;
                 justify-content: center;
-                & ul {
+                ul {
                     display: flex;
                     padding: 0;
-                    & li {
+                    li {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
                         margin: 0 14px;
-                        & svg {
+                        svg {
                             height: 32px;
                             width: 32px;
                         }
@@ -309,7 +309,7 @@ body {
         }
     }
     
-    & footer {
+    footer {
         text-align: center;
     }
 }
@@ -320,21 +320,21 @@ body {
         --gap-section: 5em;
     }
     body {
-        & header {
+        header {
             transition: .3s;
-            &:not(:not(.display-header-menu)) .menu {
+            :not(:not(.display-header-menu)) .menu {
                 transition: .3s ;
                 transform: translateY(0);
                 visibility: visible;
                 opacity: 1;
             }
-            & nav {
+            nav {
                 position: relative;
                 box-sizing: border-box;
                 height: 60px;
-                & .nav-left {
+                .nav-left {
                     width: 100%;
-                    & button#menu {
+                    button#menu {
                         display: block;
                         height: 32px;
                         width: 32px;
@@ -342,14 +342,14 @@ body {
                         margin: var(--gap);
                     }
                 }
-                & ul {
+                ul {
                     margin: var(--gap);
                     flex-direction: column;
                 }
-                & hr {
+                hr {
                     width: 33%;
                 }
-                & div#themeOption {
+                div#themeOption {
                     width: max-content;
                     /* margin: var(--gap); */
                 }
@@ -360,7 +360,7 @@ body {
         height: 290px;
     }
     .icon {
-        & span {
+        span {
             display: none;
             font-size: .7em;
         }
@@ -369,7 +369,7 @@ body {
         width: auto !important;
     }
     .hero {
-        & h1 {
+        h1 {
             font-size: 3em;
         }
     }

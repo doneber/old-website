@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import postcssNesting from 'postcss-nesting'
+import postcssNested from 'postcss-nested'
 import { createHtmlPlugin } from 'vite-plugin-html'
 
 export default defineConfig({
@@ -11,7 +11,7 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [
-        postcssNesting
+        postcssNested
       ]
     }
   }
