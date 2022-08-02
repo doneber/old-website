@@ -94,7 +94,7 @@ a {
     justify-items: center;
 }
 .card {
-    background: whitesmoke;
+    background: #eee;
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -256,19 +256,6 @@ body {
             }
         }        
 
-        .projects {
-            /* ul {
-                padding: 0;
-            }
-    
-            ul li {
-                margin: 12px 0;
-            }
-    
-            ul li p {
-                font-size: 16px;
-            } */
-        }
         .skills {
             align-items: center;
             text-align: center;
@@ -401,8 +388,5 @@ body {
     }   
     .card {
         width: 280px;
-    }
-    .card-media {
-        display: none;
     }
 }
