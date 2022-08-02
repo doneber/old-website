@@ -4,10 +4,10 @@ import data from './data.json'
 const pc = document.querySelector('#projects-container')
 data.projects.forEach(project => {
   console.log('title', project.title)
-  const projectContainer = document.createElement('li')
+  const projectContainer = document.createElement('article')
   projectContainer.classList.add('card')
   projectContainer.innerHTML = `
-    ${project.img ? '<img src="' + project.img + '" alt="" class="card-img">' : ''}
+    ${project.img ? '<img src="' + project.img + '" alt="" class="card-media">' : ''}
     <div class="card-content">
         <h3 class="card-content-title">
             ${project.title}
