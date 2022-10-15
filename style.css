@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 :root {
     --color-background: rgb(240, 240, 240);
@@ -8,17 +9,31 @@ html {
     --color-text-secondary: rgb(108 108 108);
     --color-primary: #27496D;
     --color-card: rgba(39, 73, 109, .5);
-    --gap-section: 10em;
+    --gap-section: 10rem;
     --gap: 24px;
 }
 
 .dark-theme {
-    --color-background: #27496D;
+    --color-background: #181818;
     --color-nav: rgba(39, 73, 109, 0);
     --color-text: rgb(218 218 219);
     --color-text-secondary: rgb(155 156 157);
     --color-primary: whitesmoke;
     --color-card: rgba(218, 218, 219, .3);
+}
+.side {
+    width: 120px;
+    height: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.side-left {
+    transform: translateY(60px);
+    background-image: url(https://www.gstatic.com/youtube/img/handles/handles_squiggle_2_dark_v1.svg);
+}
+.side-right {
+    transform: translateY(-120px);
+    background-image: url(https://www.gstatic.com/youtube/img/handles/handles_squiggle_1_dark_v1.svg);
 }
 
 #line2, #line3 {
@@ -123,7 +138,7 @@ a {
         }
         .card-content-description {
             /* height: 50%; */
-            font-size: 1rem;
+            font-size: 1.6rem;
         }
         .card-content-options {
             /* height: 25%; */
@@ -243,16 +258,29 @@ body {
         section.hero {
             text-align: center;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
             padding-bottom: 32vh;
             h1 {
                 margin-bottom: 2px;
-                font-size: 3.5em;
+                font-size: 3.5rem;
+                font-weight: 500;
                 color: var(--color-primary);
-                aside {
-                    color: rgb(169, 169, 169);
-                }
+                margin-bottom: 1rem;
+            }
+            aside {
+                color: var(--color-primary);
+                font-size: 3.5rem;
+                font-weight: 300;
+            }
+            figure {
+                margin-bottom: 2.4rem;
+            }
+            img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                border: 1px solid #f1f1f1;
             }
         }        
 
@@ -372,9 +400,6 @@ body {
         text-align: center;
         transform: translateY(-100%);
         visibility: hidden;
-        opacity: 0;
-    }
-    .menu {
         position: absolute;
         top: 60px;
         left: 0;

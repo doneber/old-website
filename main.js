@@ -39,6 +39,9 @@ document.querySelector('#menu').addEventListener('click', e => {
     document.querySelector('#line4').style.setProperty('opacity', '1')
     document.querySelector('#line2').style.setProperty('transform', 'rotate(0) ')
     document.querySelector('#line3').style.setProperty('transform', 'rotate(0) ')
+    document.querySelector('.menu').style.visibility = 'hidden'
+    document.querySelector('.menu').style.transform = 'translatey(100)'
+
   } else {
     document.querySelector('#line1').style.setProperty('transform', 'translatey(25%)')
     document.querySelector('#line4').style.setProperty('transform', 'translatey(-25%)')
@@ -46,6 +49,8 @@ document.querySelector('#menu').addEventListener('click', e => {
     document.querySelector('#line4').style.setProperty('opacity', '0')
     document.querySelector('#line2').style.setProperty('transform', 'rotate(40deg)')
     document.querySelector('#line3').style.setProperty('transform', 'rotate(-40deg)')
+    document.querySelector('.menu').style.visibility = 'visible'
+    document.querySelector('.menu').style.transform = 'translatey(0)'
   }
   displayMenu = !displayMenu
   e.stopImmediatePropagation()
